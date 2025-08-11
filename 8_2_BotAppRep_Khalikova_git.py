@@ -12,7 +12,7 @@ from airflow.decorators import dag, task
 # Подключение к ClickHouse
 connection = {
     'host': 'https://clickhouse.lab.karpov.courses',
-    'password': 'dpo_python_2020',
+    'password': '',
     'user': 'student',
     'database': 'simulator_20250520'  
 }
@@ -483,5 +483,6 @@ def dag_botajkhalikova_appreport():
     send_comprehensive_report_new(app_metrics, detailed_data)
     send_heatmap(detailed_data)
     send_period_comparison(app_metrics)
+
 
 dag_botajkhalikova_appreport = dag_botajkhalikova_appreport() 
